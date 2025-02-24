@@ -44,18 +44,25 @@ html {
     scroll-behavior: smooth;
 }
 @media (max-width: 600px) {
-    nav div {
-        display: flex;
-        flex-direction: row;  /* ✅ Keeps it horizontal */
-        flex-wrap: nowrap;    /* ✅ Prevents wrapping */
-        justify-content: center;
-        padding: 10px 0;
+    nav > div {
+        display: none; /* Keep menu hidden by default */
+        flex-direction: column;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav > div.active {
+        display: flex; /* Show menu when active */
     }
 
     nav a {
-        font-size: 12px;  /* ✅ Slightly smaller for mobile */
-        margin: 0 5px;    /* ✅ Reduces spacing */
-        white-space: nowrap;  /* ✅ Prevents text wrapping */
+        font-size: 14px;
+        padding: 10px 15px;
+        border-top: 1px solid #444;
     }
 }
 
@@ -140,15 +147,13 @@ html {
         }
 
         header {
-            background: rgba(42, 42, 114, 0.95);
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
+           header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
 
         nav {
             max-width: 1200px;
@@ -173,13 +178,10 @@ html {
         }
 
         section {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 4rem 2rem;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-        }
+          section {
+    margin-top: 80px;  /* Adjust based on header height */
+}
+
 
         .about {
             text-align: center;
@@ -385,10 +387,6 @@ menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
 </script>
 
 </body>
