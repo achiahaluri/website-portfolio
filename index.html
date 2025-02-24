@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-	@media (max-width: 1024px) {
+	    @media (max-width: 768px) {
     .menu-toggle {
         display: block;
         font-size: 24px;
@@ -15,7 +15,7 @@
         color: white;
     }
 
-    nav > div {
+    nav div {
         display: none;  /* Hide the menu initially */
         flex-direction: column;
         background-color: var(--primary-color);
@@ -26,16 +26,15 @@
         text-align: center;
     }
 
-    nav > div.active {
-        display: flex;  /* Show the menu when active */
-    }
-
-    nav a {
+    nav div a {
         padding: 15px;
         border-top: 1px solid #444;
     }
-}
 
+    nav div.active {
+        display: flex;  /* Show the menu when active */
+    }
+}
 
 	    section {
     scroll-margin-top: 100px;  /* Adjust based on your header height */
@@ -44,25 +43,18 @@ html {
     scroll-behavior: smooth;
 }
 @media (max-width: 600px) {
-    nav > div {
-        display: none; /* Keep menu hidden by default */
-        flex-direction: column;
-        background-color: var(--primary-color);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav > div.active {
-        display: flex; /* Show menu when active */
+    nav div {
+        display: flex;
+        flex-direction: row;  /* ✅ Keeps it horizontal */
+        flex-wrap: nowrap;    /* ✅ Prevents wrapping */
+        justify-content: center;
+        padding: 10px 0;
     }
 
     nav a {
-        font-size: 14px;
-        padding: 10px 15px;
-        border-top: 1px solid #444;
+        font-size: 12px;  /* ✅ Slightly smaller for mobile */
+        margin: 0 5px;    /* ✅ Reduces spacing */
+        white-space: nowrap;  /* ✅ Prevents text wrapping */
     }
 }
 
@@ -147,13 +139,15 @@ html {
         }
 
         header {
-           header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
+            background: rgba(42, 42, 114, 0.95);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
 
         nav {
             max-width: 1200px;
@@ -178,10 +172,13 @@ html {
         }
 
         section {
-          section {
-    margin-top: 80px;  /* Adjust based on header height */
-}
-
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 4rem 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
 
         .about {
             text-align: center;
@@ -380,13 +377,12 @@ NOV 2022-MAR 2023</h3>
         <p>&copy; 2025 Achaiah Aluri. All rights reserved.</p>
     </footer>
 	<script>
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('nav > div'); // More specific targeting
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('nav div');
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
 </script>
 
 </body>
