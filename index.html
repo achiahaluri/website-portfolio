@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+	    .download-title {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
 	    html {
     scroll-padding-top: 80px;  /* Adjust based on header height */
     scroll-behavior: smooth;   /* Enables smooth scrolling */
@@ -329,12 +354,19 @@ NOV 2022-MAR 2023</h3>
         </div>
     </section>
 
- <section id="contact" class="contact">
+<section id="contact" class="contact">
     <h2>Contact Me</h2>
-    <p><i class="fas fa-phone-alt"></i>Mobile:+919515383380</p>
-    <p><i class="fas fa-envelope"></i>Email:<a href="mailto:achaiahaluri@gmail.com">achaiahaluri@gmail.com</a></p>
-    <p><i class="fab fa-linkedin"></i>LinkedIn:<a href="https://www.linkedin.com/in/achaiah-aluri-428546278" target="_blank">www.linkedin.com/in/achaiah-aluri-428546278</a></p>
+    <p><i class="fas fa-phone-alt"></i> Mobile: +91 95153 83380</p>
+    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:achaiahaluri@gmail.com">achaiahaluri@gmail.com</a></p>
+    <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/achaiah-aluri-428546278" target="_blank">www.linkedin.com/in/achaiah-aluri-428546278</a></p>
+    
+    <!-- Download Resume Button with Title -->
+    <h3 class="download-title">Download My Resume</h3>
+    <a href="MASTER%20RESUME%20ACHAIAH.pdf" download class="download-btn">
+        <i class="fas fa-download"></i> Download Resume
+    </a>
 </section>
+
 
 
 
