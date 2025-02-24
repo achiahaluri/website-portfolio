@@ -7,84 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-	    @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        font-size: 24px;
-        cursor: pointer;
-        color: white;
-    }
-
-    nav div {
-        display: none;  /* Hide the menu initially */
-        flex-direction: column;
-        background-color: var(--primary-color);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav div a {
-        padding: 15px;
-        border-top: 1px solid #444;
-    }
-
-    nav div.active {
-        display: flex;  /* Show the menu when active */
-    }
-}
-
-	    section {
-    scroll-margin-top: 100px;  /* Adjust based on your header height */
-}
-html {
-    scroll-behavior: smooth;
-}
-@media (max-width: 600px) {
-    nav div {
-        display: flex;
-        flex-direction: row;  /* ✅ Keeps it horizontal */
-        flex-wrap: nowrap;    /* ✅ Prevents wrapping */
-        justify-content: center;
-        padding: 10px 0;
-    }
-
-    nav a {
-        font-size: 12px;  /* ✅ Slightly smaller for mobile */
-        margin: 0 5px;    /* ✅ Reduces spacing */
-        white-space: nowrap;  /* ✅ Prevents text wrapping */
-    }
-}
-
-
-/* Fix contact section layout on smaller screens */
-.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.contact p {
-    margin: 10px 0;
-    word-break: break-word;
-}
-
-/* Ensure responsiveness for smaller screens */
-@media (max-width: 600px) {
-    .contact {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .contact a {
-        font-size: 12px;
-    }
-}
-	    
 .education {
     text-align: center;
     background: #f9f9f9;
@@ -277,8 +199,6 @@ html {
     <header>
         <nav>
             <h1>Achaiah Aluri</h1>
-		<div class="menu-toggle">☰</div>
-
             <div>
                 <a href="#about">About</a>
                 <a href="#education">Education</a>
@@ -325,7 +245,7 @@ Rajiv Gandhi University of Knowledge Technologies, Basara</p>
     <section id="skills" class="skills">
         <h2>My Skills</h2>
         <ul>
-            <li>HTML & CSS</li>
+            <li>HTML & CSS</li>s
             <li>Azure DevOps</li>
             <li>C</li>   
             <li>C++</li>
@@ -357,34 +277,17 @@ NOV 2022-MAR 2023</h3>
         </div>
     </section>
 
-<section id="contact" class="contact">
+ <section id="contact" class="contact">
     <h2>Contact Me</h2>
-    <p><i class="fas fa-phone-alt"></i> Mobile: +91 95153 83380</p>
-    <p><i class="fas fa-envelope"></i> Email: 
-        <a href="mailto:achaiahaluri@gmail.com">achaiahaluri@gmail.com</a>
-    </p>
-    <p><i class="fab fa-linkedin"></i> LinkedIn: 
-        <a href="https://www.linkedin.com/in/achaiah-aluri-428546278" target="_blank">
-            LinkedIn Profile
-        </a>
-    </p>
+    <p><i class="fas fa-phone-alt"></i>Mobile:+919515383380</p>
+    <p><i class="fas fa-envelope"></i>Email:<a href="mailto:achaiahaluri@gmail.com">achaiahaluri@gmail.com</a></p>
+    <p><i class="fab fa-linkedin"></i>LinkedIn:<a href="https://www.linkedin.com/in/achaiah-aluri-428546278" target="_blank">www.linkedin.com/in/achaiah-aluri-428546278</a></p>
 </section>
-
 
 
 
     <footer>
         <p>&copy; 2025 Achaiah Aluri. All rights reserved.</p>
     </footer>
-	<script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('nav div');
-
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-</script>
-
 </body>
 </html>
- 	
